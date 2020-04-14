@@ -16,7 +16,17 @@ body {
   margin: 3rem;
 }
 
+.visual div {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: 0;
+}
+
 .pad-container {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -84,5 +94,35 @@ body {
 
 .pad-container .pad8 {
   background: #76ffb4;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
