@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo Bhaina 2', cursive;
+  text-align: center;
+  color: rgb(32, 32, 32);
+}
+
+#site-title {
+  font-size: 4rem;
+  margin: 3rem;
+}
+
+.pad-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background: linear-gradient(180deg, #f1f1f1, #cacaca);
+    transition: all 0.25s;
+    &:hover {
+      // background: linear-gradient(220deg, #f1f1f1, #cacaca);
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    &:active {
+      -webkit-box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
+      -moz-box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
+      box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
+    }
+  }
+  .pad1 {
+    background: #60d394;
+  }
+  .pad2 {
+    background: #d36060;
+  }
+  .pad3 {
+    background: #e394f3;
+  }
+  .pad4 {
+    background: #5187fc;
+  }
+  .pad5 {
+    background: #d3c760;
+  }
+  .pad6 {
+    background: #ff7ac7;
+  }
+  .pad7 {
+    background: #f8c16d;
+  }
+  .pad8 {
+    background: #76ffb4;
+  }
+}
+

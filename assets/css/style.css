@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo Bhaina 2', cursive;
+  text-align: center;
+  color: #202020;
+}
+
+#site-title {
+  font-size: 4rem;
+  margin: 3rem;
+}
+
+.pad-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.pad-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#cacaca));
+  background: linear-gradient(180deg, #f1f1f1, #cacaca);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.pad-container div:hover {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.pad-container div:active {
+  -webkit-box-shadow: inset 0px 0px 26px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: inset 0px 0px 26px 4px rgba(0, 0, 0, 0.17);
+}
+
+.pad-container .pad1 {
+  background: #60d394;
+}
+
+.pad-container .pad2 {
+  background: #d36060;
+}
+
+.pad-container .pad3 {
+  background: #e394f3;
+}
+
+.pad-container .pad4 {
+  background: #5187fc;
+}
+
+.pad-container .pad5 {
+  background: #d3c760;
+}
+
+.pad-container .pad6 {
+  background: #ff7ac7;
+}
+
+.pad-container .pad7 {
+  background: #f8c16d;
+}
+
+.pad-container .pad8 {
+  background: #76ffb4;
+}
+/*# sourceMappingURL=style.css.map */
