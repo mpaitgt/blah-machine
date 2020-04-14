@@ -1,9 +1,6 @@
 let pads = document.querySelectorAll(`.pad`);
-let power = document.querySelector('.toggle-power');
-let powerOn = true;
 
 function removeTransition(e) {
-  console.log(e.target);
   e.target.classList.remove('playing');
 }
 
@@ -31,13 +28,3 @@ pads.forEach((pad, index) => {
 })
 
 window.addEventListener('keydown', playSound);
-
-power.addEventListener('click', function() {
-  if (powerOn) {
-    power.style.justifyContent = 'flex-start';
-    powerOn = false;
-  } else {
-    power.style.justifyContent = 'flex-end';
-    powerOn = true;
-  }
-})

@@ -9,7 +9,7 @@ body {
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
   height: 100vh;
-  background: #616161;
+  background: #242424;
   color: #f8f8f8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,8 +23,8 @@ body {
 }
 
 .box {
-  background: #d6d6d6;
-  border: 5px solid #ffa52e;
+  background: #6e6e6e;
+  border: 5px solid #93e990;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -56,7 +56,7 @@ body {
   -webkit-box-shadow: 6px 7px 21px -3px rgba(0, 0, 0, 0.52);
   box-shadow: 6px 7px 21px -3px rgba(0, 0, 0, 0.52);
   border-radius: 8px;
-  color: #616161;
+  color: #93e990;
   font-size: 24px;
   margin: 5px;
   display: -webkit-box;
@@ -69,14 +69,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 80px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#cacaca));
-  background: linear-gradient(180deg, #f1f1f1, #cacaca);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6e6e6e), to(#242424));
+  background: linear-gradient(180deg, #6e6e6e, #242424);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
 .box .pad-container .pad:hover {
-  background: linear-gradient(220deg, #f1f1f1, #cacaca);
+  background: linear-gradient(220deg, #242424, #6e6e6e);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   cursor: pointer;
@@ -95,30 +95,35 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  border: 2px solid #616161;
-  background: #616161;
+  border: 2px solid #242424;
+  background: #242424;
   width: 50px;
   height: 25px;
 }
 
 .box .user-options .toggle-power .switch {
   border-radius: 50px;
-  background: #ffa52e;
+  background: #93e990;
   height: 100%;
   width: 50%;
 }
 
 .box .user-options .sound-display {
-  background: #616161;
+  background: #242424;
   min-width: 200px;
   padding: 10px 30px;
   margin: 20px;
 }
 
+.on {
+  -webkit-box-shadow: 6px 7px 21px -3px #93e990;
+  box-shadow: 0px 0px 32px -3px #93e990;
+}
+
 .playing {
   -webkit-box-shadow: inset 0px 0px 26px 4px rgba(0, 0, 0, 0.17);
   box-shadow: inset 0px 0px 26px 4px rgba(0, 0, 0, 0.17);
-  background: #ffa52e;
+  background: #93e990;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   -webkit-transition: all 0.25s;

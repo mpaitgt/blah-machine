@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 
-$orange: rgb(255, 165, 46);
-$gray: rgb(214, 214, 214);
-$grayer: rgb(97, 97, 97);
+$green: rgb(255, 145, 0);
+$gray: rgb(110, 110, 110);
+$grayer: rgb(36, 36, 36);
+$green: rgb(147, 233, 144);
 
 body {
   font-family: 'Baloo Bhaina 2', cursive;
@@ -21,7 +22,7 @@ body {
 
 .box {
   background: $gray;
-  border: 5px solid $orange;
+  border: 5px solid $green;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -38,23 +39,21 @@ body {
       -moz-box-shadow: 6px 7px 21px -3px rgba(0,0,0,0.52);
       box-shadow: 6px 7px 21px -3px rgba(0,0,0,0.52);
       border-radius: 8px;
-      color: $grayer;
+      color: $green;
       font-size: 24px;
       margin: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 80px;
-      background: linear-gradient(180deg, #f1f1f1, #cacaca);
+      background: linear-gradient(180deg, $gray, $grayer);
       transition: all 0.25s;
       &:hover {
-        background: linear-gradient(220deg, #f1f1f1, #cacaca);
+        background: linear-gradient(220deg, $grayer, $gray);
         transition: all 0.25s;
         cursor: pointer;
       }
-
     }
-
   }
   .user-options {
     width: 100%;
@@ -69,7 +68,7 @@ body {
       height: 25px;
       .switch {
         border-radius: 50px;
-        background: $orange;
+        background: $green;
         height: 100%;
         width: 50%;
       }
@@ -82,11 +81,16 @@ body {
     }
   }
 }
+.on {
+  -webkit-box-shadow: 6px 7px 21px -3px $green;
+  -moz-box-shadow: 6px 7px 21px -3px $green;
+  box-shadow: 0px 0px 32px -3px $green;
+}
 .playing {
   -webkit-box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
   -moz-box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
   box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
-  background: $orange;
+  background: $green;
   transform: scale(0.95);
   transition: all 0.25s;
 }
