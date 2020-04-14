@@ -1,38 +1,43 @@
-window.addEventListener('load', () => {
-  const sounds = document.querySelectorAll('.sound');
-  const pads = document.querySelectorAll('.pad-container div');
-  const visual = document.querySelector('.visual');
+let pads = document.querySelectorAll(`.pad`);
+let power = document.querySelector('.toggle-power');
+let powerOn = true;
 
-  const colors = [
-    '#60d394',
-    '#d36060',
-    '#e394f3',
-    '#5187fc',
-    '#d3c760',
-    '#ff7ac7',
-    '#f8c16d',
-    '#76ffb4'
-  ];
+function removeTransition(e) {
+  console.log(e.target);
+  e.target.classList.remove('playing');
+}
 
-  // sound event listeners
-  pads.forEach((pad, index) => {
-    pad.addEventListener('click', function() {
-      sounds[index].currentTime = 0;
-      sounds[index].play();
+function playSound(e) {
+  let pad = document.querySelector(`div[data-key='${e.keyCode}']`);
+  let sound = document.querySelector(`audio[data-key='${e.keyCode}']`);
+  if (!sound) return;
 
-      createBubbles(index);
-    })
+  pad.classList.add('playing');
+  sound.currentTime = 0;
+  sound.play();
+}
+
+pads.forEach((pad, index) => {
+  let sound = document.querySelectorAll('.sound');
+  pad.addEventListener('mousedown', function(e) {
+    e.target.classList.add('playing');
+    sound.currentTime = 0;
+    sound[index].play();
   })
-
-  // function that makes bubbles
-  const createBubbles = index => {
-    const bubble = document.createElement('div');
-    visual.appendChild(bubble);
-    bubble.style.backgroundColor = colors[index];
-    bubble.style.animation = 'jump 1s ease';
-    bubble.addEventListener('animationend', function() {
-      visual.removeChild(this);
-    })
-  }
+  pad.addEventListener('mouseup', function(e) {
+    e.target.classList.remove('playing');
+  })
+  pad.addEventListener('transitionend', removeTransition);
 })
 
+window.addEventListener('keydown', playSound);
+
+power.addEventListener('click', function() {
+  if (powerOn) {
+    power.style.justifyContent = 'flex-start';
+    powerOn = false;
+  } else {
+    power.style.justifyContent = 'flex-end';
+    powerOn = true;
+  }
+})

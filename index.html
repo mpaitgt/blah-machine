@@ -8,49 +8,38 @@
   <title>The Blah Machine</title>
 </head>
 <body>
-  <h1 id="site-title">The Blah Machine</h1>
 
-  <div class="visual"></div>
-
-  <div class="pad-container">
-    <div class="pad1">
-      <audio class="sound" src="./assets/sounds/kick.wav"></audio>
-      kick
+  <div class="box">
+    <div class="pad-container">
+      <div data-key="81" class="pad pad1">Q</div>
+      <div data-key="87" class="pad pad2">W</div>
+      <div data-key="69" class="pad pad3">E</div>
+      <div data-key="65" class="pad pad4">A</div>
+      <div data-key="83" class="pad pad5">S</div>
+      <div data-key="68" class="pad pad6">D</div>
+      <div data-key="90" class="pad pad7">Z</div>
+      <div data-key="88" class="pad pad8">X</div>
+      <div data-key="67" class="pad pad9">C</div>
     </div>
-    <div class="pad2">
-      <audio class="sound" src="./assets/sounds/snare.wav"></audio>
-      snare
-    </div>
-    <div class="pad3">
-      <audio class="sound" src="./assets/sounds/clap.wav"></audio>
-      clap
-    </div>
-    <div class="pad4">
-      <audio class="sound" src="./assets/sounds/hihat.wav"></audio>
-      hi-hat
-    </div>
-    <div class="pad5">
-      <audio class="sound" src="./assets/sounds/openhat.wav"></audio>
-      open-hat
-    </div>
-    <div class="pad6">
-      <audio class="sound" src="./assets/sounds/tom.wav"></audio>
-      tom
-    </div>
-    <div class="pad7">
-      <audio class="sound" src="./assets/sounds/ride.wav"></audio>
-      ride
-    </div>
-    <div class="pad8">
-      <audio class="sound" src="./assets/sounds/boom.wav"></audio>
-      boom
+    <div class="user-options">
+      Power
+      <div class="toggle-power">
+        <div class="switch"></div>
+      </div>
+      <div class="sound-display">This is where sounds appear</div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script>
-      moment().format();
-  </script>
+  <audio data-key="81" class="sound" src="./assets/sounds/hold4.mp3"></audio>
+  <audio data-key="87" class="sound" src="./assets/sounds/hold5.mp3"></audio>
+  <audio data-key="69" class="sound" src="./assets/sounds/hold7.mp3"></audio>
+  <audio data-key="65" class="sound" src="./assets/sounds/hold1.mp3"></audio>
+  <audio data-key="83" class="sound" src="./assets/sounds/hold2.mp3"></audio>
+  <audio data-key="68" class="sound" src="./assets/sounds/hold3.mp3"></audio>
+  <audio data-key="90" class="sound" src="./assets/sounds/hold6.mp3"></audio>
+  <audio data-key="88" class="sound" src="./assets/sounds/hold8.mp3"></audio>
+  <audio data-key="67" class="sound" src="./assets/sounds/hold9.mp3"></audio>
+
   <script src="./assets/js/script.js"></script>
 </body>
 </html>

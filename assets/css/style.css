@@ -8,35 +8,57 @@
 body {
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
-  color: #202020;
+  height: 100vh;
+  background: #616161;
+  color: #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#site-title {
-  font-size: 4rem;
-  margin: 3rem;
+.box {
+  background: #d6d6d6;
+  border: 5px solid #ffa52e;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.visual div {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  bottom: 0;
-}
-
-.pad-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.box .pad-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-columns: (90px)[3];
+      grid-template-columns: repeat(3, 90px);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
 }
 
-.pad-container div {
+.box .pad-container .pad {
+  -webkit-box-shadow: 6px 7px 21px -3px rgba(0, 0, 0, 0.52);
+  box-shadow: 6px 7px 21px -3px rgba(0, 0, 0, 0.52);
+  border-radius: 8px;
+  color: #616161;
+  font-size: 24px;
+  margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,54 +68,61 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100px;
+  height: 80px;
   background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#cacaca));
   background: linear-gradient(180deg, #f1f1f1, #cacaca);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
-.pad-container div:hover {
+.box .pad-container .pad:hover {
+  background: linear-gradient(220deg, #f1f1f1, #cacaca);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   cursor: pointer;
 }
 
-.pad-container div:active {
+.box .user-options {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box .user-options .toggle-power {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 2px solid #616161;
+  background: #616161;
+  width: 50px;
+  height: 25px;
+}
+
+.box .user-options .toggle-power .switch {
+  border-radius: 50px;
+  background: #ffa52e;
+  height: 100%;
+  width: 50%;
+}
+
+.box .user-options .sound-display {
+  background: #616161;
+  min-width: 200px;
+  padding: 10px 30px;
+  margin: 20px;
+}
+
+.playing {
   -webkit-box-shadow: inset 0px 0px 26px 4px rgba(0, 0, 0, 0.17);
   box-shadow: inset 0px 0px 26px 4px rgba(0, 0, 0, 0.17);
-}
-
-.pad-container .pad1 {
-  background: #60d394;
-}
-
-.pad-container .pad2 {
-  background: #d36060;
-}
-
-.pad-container .pad3 {
-  background: #e394f3;
-}
-
-.pad-container .pad4 {
-  background: #5187fc;
-}
-
-.pad-container .pad5 {
-  background: #d3c760;
-}
-
-.pad-container .pad6 {
-  background: #ff7ac7;
-}
-
-.pad-container .pad7 {
-  background: #f8c16d;
-}
-
-.pad-container .pad8 {
-  background: #76ffb4;
+  background: #ffa52e;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 @-webkit-keyframes jump {
