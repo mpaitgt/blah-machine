@@ -138,8 +138,10 @@ function setBank(arr) {
   arr.map(sound => {
     let newAudio = document.createElement('audio');
     newAudio.setAttribute('data-key', sound.keyCode);
-    newAudio.setAttribute('class', 'soundqwe');
+    newAudio.setAttribute('data-name', sound.id);
+    newAudio.setAttribute('class', 'sound');
     newAudio.setAttribute('src', sound.src);
+    generateEventListeners();
     audioBank.appendChild(newAudio);
   })
 }
