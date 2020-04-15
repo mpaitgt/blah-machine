@@ -1,18 +1,18 @@
 let pads = document.querySelectorAll(`.pad`);
 
-pads.forEach((pad, index) => {
-  let sound = document.querySelectorAll('.sound');
-  pad.addEventListener('mousedown', function(e) {
-    if (!powerOn) return;
-    e.target.classList.add('playing');
-    sound[index].currentTime = 0;
-    sound[index].play();
-  })
-  pad.addEventListener('mouseup', function(e) {
-    e.target.classList.remove('playing');
-  })
-  pad.addEventListener('transitionend', removeTransition);
-})
+// pads.forEach((pad, index) => {
+//   let sound = document.querySelectorAll('.sound');
+//   pad.addEventListener('mousedown', function(e) {
+//     if (!powerOn) return;
+//     e.target.classList.add('playing');
+//     sound[index].currentTime = 0;
+//     sound[index].play();
+//   })
+//   pad.addEventListener('mouseup', function(e) {
+//     e.target.classList.remove('playing');
+//   })
+//   pad.addEventListener('transitionend', removeTransition);
+// })
 
 function removeTransition(e) {
   e.target.classList.remove('playing');

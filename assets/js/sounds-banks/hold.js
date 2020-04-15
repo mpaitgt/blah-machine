@@ -1,4 +1,4 @@
-const bankOne = [
+export default hold = [
   {
     keyCode: 81,
     keyTrigger: 'Q',
@@ -44,13 +44,13 @@ const bankOne = [
   {
     keyCode: 88,
     keyTrigger: 'X',
-    id: 'Bass-1',
+    id: 'Bass-2',
     src: './assets/sounds/hold8.mp3'
   },  
   {
     keyCode: 67,
     keyTrigger: 'C',
-    id: 'Bass-1',
+    id: 'Bass-3',
     src: './assets/sounds/hold9.mp3'
   }
 ];
