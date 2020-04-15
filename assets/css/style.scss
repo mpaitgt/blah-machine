@@ -64,7 +64,6 @@ body {
     .toggle {
       display: flex;
       border-radius: 50px;
-      justify-content: flex-end;
       border: 2px solid $grayer;
       background: $grayer;
       width: 50px;
@@ -75,11 +74,18 @@ body {
         height: 100%;
         width: 50%;
       }
+
+    }
+    #power {
+      justify-content: flex-end;
+    }
+    #bank {
+      justify-content: flex-start;
     }
     .sound-display {
       background: $grayer;
-      min-width: 200px;
-      padding: 10px 30px;
+      min-width: 100px;
+      padding: 5px 20px;
       margin: 20px;
     }
   }

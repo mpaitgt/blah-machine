@@ -107,9 +107,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   border-radius: 50px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   border: 2px solid #242424;
   background: #242424;
   width: 50px;
@@ -123,10 +120,22 @@ body {
   width: 50%;
 }
 
+.box .user-options #power {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.box .user-options #bank {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .box .user-options .sound-display {
   background: #242424;
-  min-width: 200px;
-  padding: 10px 30px;
+  min-width: 100px;
+  padding: 5px 20px;
   margin: 20px;
 }
 
