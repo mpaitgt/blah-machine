@@ -1,4 +1,4 @@
-let power = document.querySelector('.toggle-power');
+let power = document.getElementById('power');
 let powerOn = true;
 
 power.addEventListener('click', function() {

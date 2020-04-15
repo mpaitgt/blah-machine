@@ -57,9 +57,11 @@ body {
     }
   }
   .user-options {
-    width: 100%;
-    margin: 0 auto;
-    .toggle-power {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .toggle {
       display: flex;
       border-radius: 50px;
       justify-content: flex-end;
