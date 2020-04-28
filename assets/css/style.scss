@@ -4,17 +4,22 @@
   box-sizing: border-box;
 }
 
+$displayfont1: 'VT323', monospace;
+$displayfont2: 'Press Start 2P', cursive;
+
 $green: rgb(255, 145, 0);
 $gray: rgb(110, 110, 110);
 $grayer: rgb(36, 36, 36);
 $green: rgb(147, 233, 144);
+$black: rgba(0,0,0,0.52);
 
 body {
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
   height: 100vh;
   background: $grayer;
-  color: rgb(248, 248, 248);
+  color: $black;
+  text-shadow: $black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,8 +27,7 @@ body {
 }
 
 .box {
-  background: $gray;
-  border: 5px solid $green;
+  background: $grayer;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -36,21 +40,21 @@ body {
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: 1fr;
     .pad {
-      -webkit-box-shadow: 6px 7px 21px -3px rgba(0,0,0,0.52);
-      -moz-box-shadow: 6px 7px 21px -3px rgba(0,0,0,0.52);
-      box-shadow: 6px 7px 21px -3px rgba(0,0,0,0.52);
+      -webkit-box-shadow: 6px 7px 21px -3px $black;
+      -moz-box-shadow: 6px 7px 21px -3px $black;
+      box-shadow: 6px 7px 21px -3px $black;
       border-radius: 8px;
-      color: $green;
+      color: $black;
       font-size: 24px;
       margin: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 80px;
-      background: linear-gradient(180deg, $gray, $grayer);
+      background: $grayer;
       transition: all 0.25s;
       &:hover {
-        background: linear-gradient(220deg, $grayer, $gray);
+        background: $grayer;
         transition: all 0.25s;
         cursor: pointer;
       }
@@ -64,13 +68,14 @@ body {
     .toggle {
       display: flex;
       border-radius: 50px;
-      border: 2px solid $grayer;
-      background: $grayer;
+      // border: 2px solid $gray;
+      // background: $black;
+      box-shadow: 5px 10px 10px inset;
       width: 50px;
       height: 25px;
       .switch {
         border-radius: 50px;
-        background: $green;
+        background: $black;
         height: 100%;
         width: 50%;
       }
@@ -87,18 +92,21 @@ body {
       min-width: 200px;
       padding: 5px 20px;
       margin: 20px;
+      font-size: 16px;
+      color: $grayer;
+      font-family: $displayfont1;
     }
   }
 }
 .on {
-  -webkit-box-shadow: 6px 7px 21px -3px $green;
-  -moz-box-shadow: 6px 7px 21px -3px $green;
-  box-shadow: 0px 0px 32px -3px $green;
+  -webkit-box-shadow: 6px 7px 21px -3px $black;
+  -moz-box-shadow: 6px 7px 21px -3px $black;
+  box-shadow: 0px 0px 32px -3px $black;
 }
 .playing {
-  -webkit-box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
-  -moz-box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
-  box-shadow: inset 0px 0px 26px 4px rgba(0,0,0,0.17);
+  -webkit-box-shadow: inset 0px 0px 26px 4px $gray;
+  -moz-box-shadow: inset 0px 0px 26px 4px $gray;
+  box-shadow: inset 0px 0px 26px 4px $gray;
   background: $green;
   transform: scale(0.95);
   transition: all 0.25s;

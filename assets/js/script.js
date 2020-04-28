@@ -21,11 +21,12 @@ function removeTransition(e) {
 }
 
 function playSound(e) {
-  let pad = document.querySelector(`div[data-key='${e.keyCode}']`);
-  let sound = document.querySelector(`audio[data-key='${e.keyCode}']`);
-  let display = document.querySelector('.sound-display');
+  let 
+    pad = document.querySelector(`div[data-key='${e.keyCode}']`),
+    sound = document.querySelector(`audio[data-key='${e.keyCode}']`),
+    display = document.querySelector('.sound-display');
+
   if (!sound || !powerOn) return;
-  console.log(sound.getAttribute('data-name'));
   pad.classList.add('playing');
   display.innerHTML = sound.getAttribute('data-name');
   sound.currentTime = 0;
