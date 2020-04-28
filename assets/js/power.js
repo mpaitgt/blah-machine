@@ -2,14 +2,18 @@ let power = document.getElementById('power');
 let powerOn = true;
 
 power.addEventListener('click', function() {
-  let box = document.querySelector('.box');
+  let lightSource = document.querySelector('.light-source');
+
   if (powerOn) {
     power.style.justifyContent = 'flex-start';
-    box.classList.remove('on');
+    lightSource.classList.remove('on');
+    lightSource.classList.add('off');
     powerOn = false;
   } else {
     power.style.justifyContent = 'flex-end';
-    box.classList.add('on');
+    lightSource.classList.remove('off');
+    lightSource.classList.add('on');
     powerOn = true;
   }
+
 })

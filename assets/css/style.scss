@@ -9,8 +9,9 @@ $displayfont2: 'Press Start 2P', cursive;
 
 $green: rgb(255, 145, 0);
 $gray: rgb(110, 110, 110);
-$grayer: rgb(36, 36, 36);
-$green: rgb(147, 233, 144);
+$grayer: rgb(192, 192, 192);
+$green: rgb(103, 207, 99);
+$red: rgb(253, 67, 43);
 $black: rgba(0,0,0,0.52);
 
 body {
@@ -30,11 +31,14 @@ body {
   background: $grayer;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 32px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  -webkit-box-shadow: 6px 7px 21px -3px $black;
+  -moz-box-shadow: 6px 7px 21px -3px $black;
+  box-shadow: 0px 0px 32px -3px $black;
   .pad-container {
     display: grid;
     grid-template-columns: repeat(3, 90px);
@@ -65,11 +69,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      align-self: flex-end;
+      box-shadow: 0px 0px 6px inset;
+      display: flex;
+      .light-source {
+        width: 6px;
+        height: 6px;
+        align-self: center;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      .on {
+        background: $green;
+        -webkit-box-shadow: 6px 7px 21px -3px $green;
+        -moz-box-shadow: 6px 7px 21px -3px $green;
+        box-shadow: 0px 0px 18px 6px $green;
+      }
+      .off {
+        background: $red;
+        -webkit-box-shadow: 6px 7px 21px -3px $red;
+        -moz-box-shadow: 6px 7px 21px -3px $red;
+        box-shadow: 0px 0px 18px 6px $red;
+      }
+    }
     .toggle {
       display: flex;
       border-radius: 50px;
-      // border: 2px solid $gray;
-      // background: $black;
       box-shadow: 5px 10px 10px inset;
       width: 50px;
       height: 25px;
@@ -97,11 +126,6 @@ body {
       font-family: $displayfont1;
     }
   }
-}
-.on {
-  -webkit-box-shadow: 6px 7px 21px -3px $black;
-  -moz-box-shadow: 6px 7px 21px -3px $black;
-  box-shadow: 0px 0px 32px -3px $black;
 }
 .playing {
   -webkit-box-shadow: inset 0px 0px 26px 4px $gray;

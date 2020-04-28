@@ -9,7 +9,7 @@ body {
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
   height: 100vh;
-  background: #242424;
+  background: silver;
   color: rgba(0, 0, 0, 0.52);
   text-shadow: rgba(0, 0, 0, 0.52);
   display: -webkit-box;
@@ -28,10 +28,10 @@ body {
 }
 
 .box {
-  background: #242424;
+  background: silver;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,6 +45,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 6px 7px 21px -3px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.52);
 }
 
 .box .pad-container {
@@ -73,13 +75,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 80px;
-  background: #242424;
+  background: silver;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
 .box .pad-container .pad:hover {
-  background: #242424;
+  background: silver;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   cursor: pointer;
@@ -99,6 +101,41 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.box .user-options .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-shadow: 0px 0px 6px inset;
+          box-shadow: 0px 0px 6px inset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box .user-options .indicator .light-source {
+  width: 6px;
+  height: 6px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.box .user-options .indicator .on {
+  background: #67cf63;
+  -webkit-box-shadow: 6px 7px 21px -3px #67cf63;
+  box-shadow: 0px 0px 18px 6px #67cf63;
+}
+
+.box .user-options .indicator .off {
+  background: #fd432b;
+  -webkit-box-shadow: 6px 7px 21px -3px #fd432b;
+  box-shadow: 0px 0px 18px 6px #fd432b;
 }
 
 .box .user-options .toggle {
@@ -132,24 +169,19 @@ body {
 }
 
 .box .user-options .sound-display {
-  background: #242424;
+  background: silver;
   min-width: 200px;
   padding: 5px 20px;
   margin: 20px;
   font-size: 16px;
-  color: #242424;
+  color: silver;
   font-family: "VT323", monospace;
-}
-
-.on {
-  -webkit-box-shadow: 6px 7px 21px -3px rgba(0, 0, 0, 0.52);
-  box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.52);
 }
 
 .playing {
   -webkit-box-shadow: inset 0px 0px 26px 4px #6e6e6e;
   box-shadow: inset 0px 0px 26px 4px #6e6e6e;
-  background: #93e990;
+  background: #67cf63;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   -webkit-transition: all 0.25s;
