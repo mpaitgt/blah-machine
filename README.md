@@ -1,4 +1,4 @@
-# blah-machine
+# drum-machine
 
 The "Blah" Machine is a drum machine I built using pure HTML, CSS, and JavaScript. The "Blah" comes from __Blahvocado__, the moniker I have previously used to write and produce songs under.
 
