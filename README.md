@@ -1,6 +1,6 @@
 # drum-machine
 
-The "Blah" Machine is a drum machine I built using pure HTML, CSS, and JavaScript. The "Blah" comes from __Blahvocado__, the moniker I have previously used to write and produce songs under.
+I built this drum machine using pure HTML, CSS, and JavaScript.
 
 The samples in each of the two banks - _Hold My Soul_ and _Nervepool_ - are ripped from two songs I have written by the same names.
 
