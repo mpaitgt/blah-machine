@@ -141,13 +141,11 @@ function setBank(arr) {
     newAudio.setAttribute('data-name', sound.id);
     newAudio.setAttribute('class', 'sound');
     newAudio.setAttribute('src', sound.src);
-    generateEventListeners();
     audioBank.appendChild(newAudio);
   })
 }
 
 window.onload = function() {
   this.setBank(hold);
+  generateEventListeners();
 }
-
-// https://ia800409.us.archive.org/9/items/Ride-1990Nowhere/09%20-%20Taste.mp3

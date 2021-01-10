@@ -6,8 +6,8 @@ function generateEventListeners() {
     pad.addEventListener('mousedown', function(e) {
       if (!powerOn) return;
       e.target.classList.add('playing');
-      // sound[index].currentTime = 0;
-      // sound[index].play();
+      sound[index].currentTime = 0;
+      sound[index].play();
     })
     pad.addEventListener('mouseup', function(e) {
       e.target.classList.remove('playing');
