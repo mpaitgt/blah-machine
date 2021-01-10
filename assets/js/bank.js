@@ -118,14 +118,15 @@ let
 // toggle banks
 bank.addEventListener('click', function() {
   let bankOption = document.getElementById('bank-option');
+  let toggleSwitch = document.querySelector('.bank_switch');
   if (bankSelect) {
     bankOption.innerHTML = 'Nervepool';
-    bank.style.justifyContent = 'flex-end';
+    toggleSwitch.classList.add('switch_on');
     setBank(nerve);
     bankSelect = false;
   } else {
     bankOption.innerHTML = 'Hold My Soul';
-    bank.style.justifyContent = 'flex-start';
+    toggleSwitch.classList.remove('switch_on');
     setBank(hold);
     bankSelect = true;
   }

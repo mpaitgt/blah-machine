@@ -7,20 +7,26 @@
 $displayfont1: 'VT323', monospace;
 $displayfont2: 'Press Start 2P', cursive;
 
-$green: rgb(255, 145, 0);
-$gray: rgb(110, 110, 110);
-$grayer: rgb(192, 192, 192);
+$primary: rgb(22, 36, 31);
+$secondary: lighten($primary, 5%);
+$tertiary: lighten($primary, 10%);
+$text: lighten($primary, 70%);
 $green: rgb(103, 207, 99);
 $red: rgb(253, 67, 43);
-$black: rgba(0,0,0,0.52);
+
+$morph:     
+  12px 12px 24px 0 rgba(0, 0, 0, 0.7),
+  -8px -8px 24px 0 rgba(255, 255, 255, 0.1);
+$morph_inset:
+  -8px -8px 24px 0 rgba(0, 0, 0, .7) inset,
+  12px 12px 24px 0 rgba(255, 255, 255, 0.1) inset;
 
 body {
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
   height: 100vh;
-  background: $grayer;
-  color: $black;
-  text-shadow: $black;
+  background: $primary;
+  color: $text;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,38 +34,33 @@ body {
 }
 
 .box {
-  background: $grayer;
-  max-width: 800px;
+  background: $primary;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 32px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: 6px 7px 21px -3px $black;
-  -moz-box-shadow: 6px 7px 21px -3px $black;
-  box-shadow: 0px 0px 32px -3px $black;
+  border-radius: 8px;
+  box-shadow: $morph;
   .pad-container {
     display: grid;
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: 1fr;
+    grid-gap: 20px;
     .pad {
-      -webkit-box-shadow: 6px 7px 21px -3px $black;
-      -moz-box-shadow: 6px 7px 21px -3px $black;
-      box-shadow: 6px 7px 21px -3px $black;
+      box-shadow: $morph;
       border-radius: 8px;
-      color: $black;
+      background: linear-gradient(45deg, $primary, $secondary);
       font-size: 24px;
       margin: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 80px;
-      background: $grayer;
-      transition: all 0.25s;
+      transition: all 0.1s;
       &:hover {
-        background: $grayer;
-        transition: all 0.25s;
         cursor: pointer;
       }
     }
@@ -90,25 +91,32 @@ body {
         box-shadow: 0px 0px 18px 6px $green;
       }
       .off {
-        background: $red;
-        -webkit-box-shadow: 6px 7px 21px -3px $red;
-        -moz-box-shadow: 6px 7px 21px -3px $red;
-        box-shadow: 0px 0px 18px 6px $red;
+        background: $secondary;
+        box-shadow: none;
       }
     }
     .toggle {
-      display: flex;
       border-radius: 50px;
-      box-shadow: 5px 10px 10px inset;
-      width: 50px;
-      height: 25px;
+      box-shadow: $morph_inset;
+      width: 92px;
+      height: 50px;
+      position: relative;
       .switch {
         border-radius: 50px;
-        background: $black;
-        height: 100%;
-        width: 50%;
+        background: linear-gradient(45deg, $secondary, $tertiary);
+        height: 38px;
+        width: 38px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 5px;
+        transition: left 0.1s;
       }
-
+      .switch_on {
+        left: 50px;
+        transition: left 0.1s;
+      }
     }
     #power {
       justify-content: flex-end;
@@ -117,23 +125,23 @@ body {
       justify-content: flex-start;
     }
     .sound-display {
-      background: $grayer;
+      background: $primary;
       min-width: 200px;
       padding: 5px 20px;
       margin: 20px;
       font-size: 16px;
-      color: $grayer;
+      color: $primary;
       font-family: $displayfont1;
     }
+    // input[type=range] {
+    //   color: none;
+    // }
   }
 }
 .playing {
-  -webkit-box-shadow: inset 0px 0px 26px 4px $gray;
-  -moz-box-shadow: inset 0px 0px 26px 4px $gray;
-  box-shadow: inset 0px 0px 26px 4px $gray;
-  background: $green;
   transform: scale(0.95);
-  transition: all 0.25s;
+  transition: all 0.1s;
+  box-shadow: none !important;
 }
 
 
