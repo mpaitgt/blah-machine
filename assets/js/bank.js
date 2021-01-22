@@ -145,8 +145,3 @@ function setBank(arr) {
     audioBank.appendChild(newAudio);
   })
 }
-
-window.onload = function() {
-  this.setBank(hold);
-  generateEventListeners();
-}

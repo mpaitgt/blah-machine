@@ -1,6 +1,5 @@
-let pads = document.querySelectorAll(`.pad`);
-
 function generateEventListeners() {
+  let pads = document.querySelectorAll(`.pad`);
   pads.forEach((pad, index) => {
     let sound = document.querySelectorAll('.sound');
     pad.addEventListener('mousedown', function(e) {
@@ -14,6 +13,7 @@ function generateEventListeners() {
     })
     pad.addEventListener('transitionend', removeTransition);
   })
+  window.addEventListener('keydown', playSound);
 }
 
 function removeTransition(e) {
@@ -32,5 +32,3 @@ function playSound(e) {
   sound.currentTime = 0;
   sound.play();
 }
-
-window.addEventListener('keydown', playSound);
