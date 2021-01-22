@@ -7,7 +7,7 @@
 $displayfont1: 'VT323', monospace;
 $displayfont2: 'Press Start 2P', cursive;
 
-$primary: rgb(22, 36, 31);
+$primary: rgb(33, 97, 73);
 $secondary: lighten($primary, 5%);
 $tertiary: lighten($primary, 10%);
 $text: lighten($primary, 70%);
@@ -15,11 +15,16 @@ $green: rgb(103, 207, 99);
 $red: rgb(253, 67, 43);
 
 $morph:     
-  12px 12px 24px 0 rgba(0, 0, 0, 0.7),
-  -8px -8px 24px 0 rgba(255, 255, 255, 0.1);
+  12px 12px 24px 0 rgba(0, 0, 0, 0.15),
+  -8px -8px 24px 0 rgba(255, 255, 255, 0.12);
 $morph_inset:
-  -8px -8px 24px 0 rgba(0, 0, 0, .7) inset,
-  12px 12px 24px 0 rgba(255, 255, 255, 0.1) inset;
+  -8px -8px 24px 0 rgba(0, 0, 0, .15) inset,
+  12px 12px 24px 0 rgba(255, 255, 255, 0.12) inset;
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: 'Baloo Bhaina 2', cursive;
@@ -31,6 +36,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.page-header {
+  font-size: 62px;
+  font-style: italic;
+  font-weight: 900;
+  color: $tertiary;
 }
 
 .box {

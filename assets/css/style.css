@@ -5,12 +5,17 @@
           box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
   height: 100vh;
-  background: #16241f;
-  color: #c4dbd3;
+  background: #216149;
+  color: #eef9f5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,8 +31,15 @@ body {
           align-items: center;
 }
 
+.page-header {
+  font-size: 62px;
+  font-style: italic;
+  font-weight: 900;
+  color: #2e8766;
+}
+
 .box {
-  background: #16241f;
+  background: #216149;
   max-width: 1000px;
   margin: 0 auto;
   padding: 32px;
@@ -45,8 +57,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 8px;
-  -webkit-box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.7), -8px -8px 24px 0 rgba(255, 255, 255, 0.1);
-          box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.7), -8px -8px 24px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.15), -8px -8px 24px 0 rgba(255, 255, 255, 0.12);
+          box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.15), -8px -8px 24px 0 rgba(255, 255, 255, 0.12);
 }
 
 .box .pad-container {
@@ -60,10 +72,10 @@ body {
 }
 
 .box .pad-container .pad {
-  -webkit-box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.7), -8px -8px 24px 0 rgba(255, 255, 255, 0.1);
-          box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.7), -8px -8px 24px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.15), -8px -8px 24px 0 rgba(255, 255, 255, 0.12);
+          box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.15), -8px -8px 24px 0 rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: linear-gradient(45deg, #16241f, #20342d);
+  background: linear-gradient(45deg, #216149, #277457);
   font-size: 24px;
   margin: 5px;
   display: -webkit-box;
@@ -130,15 +142,15 @@ body {
 }
 
 .box .user-options .indicator .off {
-  background: #20342d;
+  background: #277457;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .box .user-options .toggle {
   border-radius: 50px;
-  -webkit-box-shadow: -8px -8px 24px 0 rgba(0, 0, 0, 0.7) inset, 12px 12px 24px 0 rgba(255, 255, 255, 0.1) inset;
-          box-shadow: -8px -8px 24px 0 rgba(0, 0, 0, 0.7) inset, 12px 12px 24px 0 rgba(255, 255, 255, 0.1) inset;
+  -webkit-box-shadow: -8px -8px 24px 0 rgba(0, 0, 0, 0.15) inset, 12px 12px 24px 0 rgba(255, 255, 255, 0.12) inset;
+          box-shadow: -8px -8px 24px 0 rgba(0, 0, 0, 0.15) inset, 12px 12px 24px 0 rgba(255, 255, 255, 0.12) inset;
   width: 92px;
   height: 50px;
   position: relative;
@@ -146,7 +158,7 @@ body {
 
 .box .user-options .toggle .switch {
   border-radius: 50px;
-  background: linear-gradient(45deg, #20342d, #29443a);
+  background: linear-gradient(45deg, #277457, #2e8766);
   height: 38px;
   width: 38px;
   position: absolute;
@@ -177,12 +189,12 @@ body {
 }
 
 .box .user-options .sound-display {
-  background: #16241f;
+  background: #216149;
   min-width: 200px;
   padding: 5px 20px;
   margin: 20px;
   font-size: 16px;
-  color: #16241f;
+  color: #216149;
   font-family: "VT323", monospace;
 }
 
