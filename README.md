@@ -1,4 +1,4 @@
-# drum-machine
+# The Drum Machine
 
 ## Welcome to the Drum Machine!
 
